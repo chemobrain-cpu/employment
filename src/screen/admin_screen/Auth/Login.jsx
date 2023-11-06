@@ -88,7 +88,7 @@ function LoginPage() {
 
 
                     <div className={styles.inputcontainer}>
-                        <h2>Signin in with your credentials</h2>
+                        <h2>Sign in in with your credentials</h2>
 
                         <div className={styles.formCard}>
                             <FormInput

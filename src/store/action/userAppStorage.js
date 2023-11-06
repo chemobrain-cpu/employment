@@ -10,7 +10,7 @@ export const FETCH_USER = 'FETCH_USER'
 export const login = (data) => {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch('http://localhost:9091/login', {
+      let response = await fetch('https://greatgenius.onrender.com/login', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const signup = (data) => {
   let dataObj = data
   return async (dispatch, getState) => {
     try {
-      let response = await fetch(`http://localhost:9091/signup`, {
+      let response = await fetch(`https://greatgenius.onrender.com/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -130,8 +130,8 @@ export const signup = (data) => {
     }
   }
 }
-//http://localhost:9091
-//http://localhost:9091
+//https://greatgenius.onrender.com
+//https://greatgenius.onrender.com
 
 
 
@@ -143,7 +143,7 @@ export const updateUser = (data) => {
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:9091/users/${user._id}`, {
+      let response = await fetch(`https://greatgenius.onrender.com/users/${user._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

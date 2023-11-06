@@ -407,8 +407,7 @@ function SignupPage() {
 
 
 
-                    <p className={styles.alternative}>Already have an account? <span onClick={toLogin}>Login</span></p>
-
+                 
                 </form>
 
             </div>

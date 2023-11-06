@@ -35,7 +35,11 @@
 }
 
 .screenContainer .rightContainer .rightformcontainer h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: left;
+    color:rgb(50,50,50);
+    width:100%;
+    margin-bottom: 30px;
 
 }
 
@@ -185,7 +189,7 @@
 @media screen and (max-width:800px) {
 
     .screenContainer .rightContainer .rightformcontainer {
-        width: 80%;
+        width: 100%;
         justify-content: flex-start;
         border: none;
     }

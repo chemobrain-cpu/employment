@@ -241,7 +241,7 @@ function SignupPage() {
 
 
                     <div className={styles.inputcontainer}>
-                        <h2>Register</h2>
+                        <h2>Create a new employee profile here</h2>
 
 
 

@@ -88,7 +88,7 @@ function LoginPage() {
 
 
                     <div className={styles.inputcontainer}>
-                        <h2>Login</h2>
+                        <h2>Signin in with your credentials</h2>
 
                         <div className={styles.formCard}>
                             <FormInput
@@ -128,14 +128,14 @@ function LoginPage() {
 
 
                     <div className={styles.submit}>
-                        <SubmitBtn style={{ opacity: isFormValid ? 1 : 0.5, borderRadius: '8px' }} text="Create your account" />
+                        <SubmitBtn style={{ opacity: isFormValid ? 1 : 0.5, borderRadius: '8px' }} text="Signin" />
 
                         {isError && <p className={styles.errorText} >{isErrorInfo}</p>}
                     </div>
                   
 
 
-                    <p className={styles.alternative}>Don't have an account? <span onClick={toLogin}>Register</span></p>
+                    
 
                 </form>
 

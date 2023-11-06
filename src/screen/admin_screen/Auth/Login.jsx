@@ -31,7 +31,7 @@ function LoginPage() {
     let isFormValid =  adminPassword && !adminPasswordError && !adminEmailError && adminEmail
 
     let toLogin = ()=>{
-        navigate('/login')
+        navigate('/register')
     }
 
     let setFormDetails = useCallback(e => {

@@ -30,6 +30,12 @@ const Sidebar = ({ status }) => {
             title: 'Edit',
             link:'/edit'
         },
+
+        {
+            icon: 'key',
+            title: 'Logout',
+            link:'/'
+        },
        
        
        

@@ -14,6 +14,7 @@ const DashboardHeader = ({ showmenuHandler, title, openTransferModal, openTradeM
 
     return (<div className={styles.dashboardheader} style={{backgroundColor:color.background,boxShadow:color.background && 'none',borderBottom:`1px solid ${color.normalText?color.normalText:'#fff'}`}}>
         <div className={styles.headerleft}>
+        <h1 className={styles.name}>Profile</h1>
             
 
         

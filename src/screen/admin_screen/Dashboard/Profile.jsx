@@ -9,10 +9,10 @@ import LoadingModal from "../../../component/Modal/LoadingModal";
 import { useDispatch } from 'react-redux';
 import { updateUser} from '../../../store/action/userAppStorage';
 import { Error } from '../../../component/common/Error';
-import { AdminEditComponent } from '../../../component/adminscreencomp/Home/AdminEdit';
+import { ProfileComponent } from '../../../component/adminscreencomp/Home/Profile';
 
 
-const AdminEdit = ({ status }) => {
+const ProfileEdit = ({ status }) => {
     //tradeModal and transfer modal
     let [isError, setIsError] = useState(false)
     let {  } = useSelector(state => state.userAuth)
@@ -58,11 +58,11 @@ const AdminEdit = ({ status }) => {
                 {/*mobile and dashboard headers*/}
                 <DashboardDrawer showmenuHandler={showmenuHandler} />
                 <DashboardHeader showmenuHandler={showmenuHandler} title='Profile' />
-                <AdminEditComponent  updateHandler = {updateHandler} />
+                <ProfileComponent  updateHandler = {updateHandler} />
             </div>
         </div>
     </>
     )
 }
 
-export default AdminEdit
+export default ProfileEdit

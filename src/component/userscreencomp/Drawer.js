@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 let topMenu = [
   {
-    icon: 'user',
+    icon: 'home',
     title: 'Profile',
     link: '/profile'
   },
@@ -16,7 +16,11 @@ let topMenu = [
     title: 'Edit',
     link: '/edit'
   },
- 
+  {
+    icon: 'key',
+    title: 'Logout',
+    link: '/'
+  },
   
   
 ]

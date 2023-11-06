@@ -74,6 +74,7 @@ export const signup = (data) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+
         },
         body: JSON.stringify(data)
       })
@@ -133,71 +134,22 @@ export const signup = (data) => {
 //http://localhost:9091
 
 
-export const fetchUser = () => {
+
+export const updateUser = (data) => {
   return async (dispatch, getState) => {
     let {
-      userToken
+      userToken,
+      user
     } = getState().userAuth
 
     try {
-      let response = await fetch(`http://localhost:9091/users/:id`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "header": `${userToken}`
-        }
-      })
-      //an error 
-      if (response.status === 300) {
-        let data = await response.json()
-        return {
-          bool: false,
-          message: data.response,
-        }
-      }
-
-      if (response.status === 301) {
-        let data = await response.json()
-        return {
-          bool: false,
-          message: data.response,
-        }
-      }
-
-      if (response.status === 200) {
-        let data = await response.json()
-        dispatch({ type: FETCH_USER, payload: data.response })
-
-        return {
-          bool: true,
-          message: data.response
-        }
-      }
-    }
-
-    catch (err) {
-      return {
-        bool: false,
-        message: err.message
-      }
-    }
-  }
-
-}
-
-export const updateUser = (id) => {
-  return async (dispatch, getState) => {
-    let {
-      userToken
-    } = getState().userAuth
-
-    try {
-      let response = await fetch(`http://localhost:9091/users/${id}`, {
+      let response = await fetch(`http://localhost:9091/users/${user._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
-        }
+        },
+        body: JSON.stringify(data)
       })
       //an error 
       if (response.status === 300) {
@@ -205,6 +157,7 @@ export const updateUser = (id) => {
         return {
           bool: false,
           message: data.response,
+          url: `/edit`
         }
       }
 
@@ -213,6 +166,7 @@ export const updateUser = (id) => {
         return {
           bool: false,
           message: data.response,
+          url: `/edit`
         }
       }
 
@@ -222,7 +176,8 @@ export const updateUser = (id) => {
         dispatch({ type: UPDATE_USER, payload: data.response })
         return {
           bool: true,
-          message: data.response
+          message: data.response,
+          url: `/profile`
         }
       }
     }
@@ -230,7 +185,8 @@ export const updateUser = (id) => {
     catch (err) {
       return {
         bool: false,
-        message: err.message
+        message: err.message,
+        url: `/edit`
       }
     }
   }

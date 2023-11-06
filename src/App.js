@@ -12,8 +12,10 @@ const Login = React.lazy(() => import('./screen/admin_screen/Auth/Login'))
 
 const AdminSignup = React.lazy(() => import('./screen/admin_screen/Auth/Signup'))
 
+const  Edit = React.lazy(() => import('./screen/admin_screen/Auth/Edit'))
 
-const AdminEditAdmin = React.lazy(() => import('./screen/admin_screen/Dashboard/AdminEditAdmin'))
+
+const Profile = React.lazy(() => import('./screen/admin_screen/Dashboard/Profile'))
 
 
 function App() {
@@ -40,7 +42,9 @@ function App() {
           <Route path='/signup' element={<AdminSignup />} />
 
 
-          <Route path='/profile' element={userToken ? <AdminEditAdmin status={true} /> : <Login />} />
+          <Route path='/profile' element={userToken ? <Profile status={true} /> : <Login />} />
+
+          <Route path='/edit' element={userToken ? <Edit status={true} /> : <Login />} />
 
 
         </Routes>

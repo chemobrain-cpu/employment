@@ -1,0 +1,243 @@
+/* styling the screen container */
+.screenContainer {
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+.screenContainer .rightContainer {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.screenContainer .rightContainer .rightformcontainer {
+    width: 100%;
+    border: 1px solid var(--color-fader);
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 0px;
+    border-radius: 15px;
+
+
+}
+
+.screenContainer .rightContainer .rightformcontainer .navigate {
+    display: none;
+
+
+}
+
+.screenContainer .rightContainer .rightformcontainer h2 {
+    font-size: 2rem;
+
+}
+
+.screenContainer .rightContainer .rightformcontainer .inputcontainer {
+    margin-bottom: 50px;
+
+}
+
+
+.screenContainer .rightContainer .rightformcontainer .formCard {
+    margin-bottom: 15px;
+}
+
+
+
+
+.screenContainer .rightContainer .rightformcontainer .formCard textarea,
+.screenContainer .rightContainer .rightformcontainer .formCard input {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    color: var(--fadeText);
+    font-size: 1rem;
+    font-weight: 300;
+    border: 1px solid rgb(245, 245, 245);
+    padding-left: 10px;
+    background-color: rgb(247, 247, 247);
+}
+
+.screenContainer .rightContainer .rightformcontainer .formCard input{
+    height:45px;
+}
+
+
+.screenContainer .rightContainer .rightformcontainer .formCard .img{
+    width: 100%;
+    height:100px;
+    margin-bottom: 80px;
+
+
+}
+
+.screenContainer .rightContainer .rightformcontainer .formCard img{
+    width: 100%;
+
+}
+
+
+.screenContainer .rightContainer .rightformcontainer .formCard label {
+    font-weight: 600;
+    color: rgb(22, 22, 22);
+    font-size: 1.1rem;
+    font-family: Poppins;
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+
+
+}
+
+
+
+.screenContainer .rightContainer .rightformcontainer .formCard textarea:focus {
+    border: 2px solid var(--color-black);
+}
+
+
+
+
+
+.screenContainer .rightContainer .rightformcontainer .submit {
+    margin-bottom: 20px;
+
+}
+
+.screenContainer .rightContainer .rightformcontainer .terms {
+
+    font-size: 1rem;
+    width: 90%;
+    font-weight: 600;
+
+}
+
+.screenContainer .rightContainer .rightformcontainer .terms span {
+    color: var(--color-blue)
+}
+
+.screenContainer .rightContainer .rightformcontainer .alternative {
+    padding-bottom: 100px;
+    font-size: 1rem;
+    width: 90%;
+    font-weight: 600;
+}
+
+
+
+.screenContainer .rightContainer .rightformcontainer .alternative span {
+    color: var(--color-blue)
+}
+
+
+
+
+.screenContainer .rightContainer .rightformcontainer .verifytext {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+
+
+.screenContainer .rightContainer .rightformcontainer span {
+    font-weight: 900;
+}
+
+.errorText {
+    font-size: 1.1rem;
+    color: var(--color-red);
+    text-align: center;
+
+}
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .screenContainer .rightContainer .rightformcontainer {}
+
+
+
+}
+
+@media screen and (max-width:850px) {
+    .screenContainer .rightContainer .rightformcontainer {}
+
+    .screenContainer h1 {
+        font-size: 2rem;
+    }
+
+
+
+}
+
+@media screen and (max-width:800px) {
+
+    .screenContainer .rightContainer .rightformcontainer {
+        width: 80%;
+        justify-content: flex-start;
+        border: none;
+    }
+
+
+
+}
+
+@media screen and (max-width:650px) {
+    .screenContainer h1 {
+        font-size: 1.5rem;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 550px) {
+
+    .screenContainer .rightContainer {
+        width: 100%;
+    }
+
+    .screenContainer .rightContainer .rightformcontainer {
+        padding-top: 20px;
+
+
+    }
+
+    .screenContainer .rightContainer .rightformcontainer {
+        padding-top: 20px;
+
+
+    }
+
+    .screenContainer .rightContainer .rightformcontainer .navigate {
+        display: block;
+
+
+    }
+
+
+
+}
+
+@media screen and (max-width: 291px) {
+    .screenContainer .rightContainer .rightformcontainer h2 {
+        font-size: 1.5rem;
+
+    }
+
+
+}

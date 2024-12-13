@@ -151,7 +151,7 @@ function SignupPage() {
                             value={formData.fullName}
                             onChange={handleChange}
                             placeholder="Enter full name"
-                            
+
                         />
                     </div>
 
@@ -163,7 +163,7 @@ function SignupPage() {
                             value={formData.patientId}
                             onChange={handleChange}
                             placeholder="Enter patient ID"
-                            
+
                         />
                     </div>
 
@@ -174,7 +174,7 @@ function SignupPage() {
                             name="dateOfBirth"
                             value={formData.dateOfBirth}
                             onChange={handleChange}
-                            
+
                         />
                     </div>
 
@@ -184,7 +184,7 @@ function SignupPage() {
                             name="gender"
                             value={formData.gender || 'Male'}  // Set default value to "Male" if formData.gender is undefined
                             onChange={handleChange}
-                            
+
                         >
                             <option value="Male" selected>Male</option>
                             <option value="Female">Female</option>
@@ -202,7 +202,7 @@ function SignupPage() {
                             value={formData.contactInfo_phoneNumber}
                             onChange={handleChange}
                             placeholder="Enter phone number"
-                            
+
                         />
                     </div>
 
@@ -214,7 +214,7 @@ function SignupPage() {
                             value={formData.contactInfo_email}
                             onChange={handleChange}
                             placeholder="Enter email address"
-                            
+
                         />
                     </div>
 
@@ -226,7 +226,7 @@ function SignupPage() {
                             value={formData.contactInfo_address}
                             onChange={handleChange}
                             placeholder="Enter address"
-                            
+
                         />
                     </div>
 
@@ -240,7 +240,7 @@ function SignupPage() {
                             value={formData.emergencyContact_name}
                             onChange={handleChange}
                             placeholder="Enter contact name"
-                            
+
                         />
                     </div>
 
@@ -252,7 +252,7 @@ function SignupPage() {
                             value={formData.emergencyContact_relationship}
                             onChange={handleChange}
                             placeholder="Enter relationship"
-                            
+
                         />
                     </div>
 
@@ -264,7 +264,7 @@ function SignupPage() {
                             value={formData.emergencyContact_phoneNumber}
                             onChange={handleChange}
                             placeholder="Enter phone number"
-                            
+
                         />
                     </div>
 
@@ -324,7 +324,7 @@ function SignupPage() {
                             value={formData.reasonForVisit}
                             onChange={handleChange}
                             placeholder="Enter reason for visit"
-                            
+
                         />
                     </div>
 
@@ -522,11 +522,11 @@ function SignupPage() {
                     </div>
 
                     {/* Billing and Insurance Information */}
+                    {/* Billing and Insurance Information */}
                     <h3>Billing and Insurance Information</h3>
                     <div className={styles.formCard}>
                         <label>Billing Charges</label>
-                        <input
-                            type="number"
+                        <textarea
                             name="billingSummary_charges"
                             value={formData.billingSummary_charges}
                             onChange={handleChange}
@@ -536,8 +536,7 @@ function SignupPage() {
 
                     <div className={styles.formCard}>
                         <label>Billing Payments</label>
-                        <input
-                            type="number"
+                        <textarea
                             name="billingSummary_payments"
                             value={formData.billingSummary_payments}
                             onChange={handleChange}
@@ -547,8 +546,7 @@ function SignupPage() {
 
                     <div className={styles.formCard}>
                         <label>Outstanding Balance</label>
-                        <input
-                            type="number"
+                        <textarea
                             name="billingSummary_outstandingBalance"
                             value={formData.billingSummary_outstandingBalance}
                             onChange={handleChange}
@@ -558,8 +556,7 @@ function SignupPage() {
 
                     <div className={styles.formCard}>
                         <label>Insurance Provider</label>
-                        <input
-                            type="text"
+                        <textarea
                             name="insurance_provider"
                             value={formData.insurance_provider}
                             onChange={handleChange}
@@ -569,8 +566,7 @@ function SignupPage() {
 
                     <div className={styles.formCard}>
                         <label>Insurance Policy Number</label>
-                        <input
-                            type="text"
+                        <textarea
                             name="insurance_policyNumber"
                             value={formData.insurance_policyNumber}
                             onChange={handleChange}

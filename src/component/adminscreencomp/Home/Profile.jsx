@@ -35,9 +35,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Profile</h2>
                         <div style={{ textAlign: 'center' }}>
                             <img
@@ -47,7 +45,7 @@ export const ProfileComponent = () => {
                                     width: '150px',
                                     height: '150px',
                                     borderRadius: '50%',
-                                    border: '4px solid #3a4d6c',
+                                    border: '2px solid #3a4d6c',
                                     objectFit: 'cover'
                                 }}
                             />
@@ -68,9 +66,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Patient Information</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Full Name:</strong> {isData?.fullName || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Patient ID:</strong> {isData?.patientId || 'N/A'}</div>
@@ -86,9 +82,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Contact Information</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Phone Number:</strong> {isData?.contactInfo_phoneNumber || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Email:</strong> {isData?.contactInfo_email || 'N/A'}</div>
@@ -103,9 +97,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Emergency Contact</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Name:</strong> {isData?.emergencyContact_name || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Relationship:</strong> {isData?.emergencyContact_relationship || 'N/A'}</div>
@@ -120,9 +112,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Medical History</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Allergies:</strong> {isData?.allergies || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Chronic Conditions:</strong> {isData?.chronicConditions || 'N/A'}</div>
@@ -138,9 +128,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Current Visit Details</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Reason for Visit:</strong> {isData?.reasonForVisit || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Current Medications:</strong> {isData?.currentMedications || 'N/A'}</div>
@@ -160,9 +148,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Treatment and Diagnostics</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Lab Test Results:</strong> {isData?.labTestResults || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Imaging Results:</strong> {isData?.imagingResults || 'N/A'}</div>
@@ -178,9 +164,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Appointment History</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Past Visits Date:</strong> {formatDate(isData?.pastVisits_date) || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Department:</strong> {isData?.pastVisits_department || 'N/A'}</div>
@@ -198,9 +182,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Billing & Insurance</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Charges:</strong> ${isData?.billingSummary_charges || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Payments:</strong> ${isData?.billingSummary_payments || 'N/A'}</div>
@@ -217,9 +199,7 @@ export const ProfileComponent = () => {
                         padding: '20px',
                         borderRadius: '8px',
                         
-                        transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease',
-                        cursor: 'pointer'
-                    }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+                    }}>
                         <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Discharge Summary</h2>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Diagnosis:</strong> {isData?.dischargeSummary_diagnosis || 'N/A'}</div>
                         <div style={{ marginBottom: '8px', fontSize: '1.1rem', color: '#333' }}><strong>Treatment Received:</strong> {isData?.dischargeSummary_treatmentReceived || 'N/A'}</div>

@@ -138,10 +138,7 @@ const ProfileEdit = ({ status }) => {
                             cursor: 'pointer',
                             transition: 'background-color 0.3s ease, transform 0.3s ease',
                         }}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1a2f4f'}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = color.fadeButtonColor || '#3a4d6c'}
-                        onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
-                        onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                        
                     >
                         person
                     </span>

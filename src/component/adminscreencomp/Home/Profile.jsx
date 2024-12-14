@@ -29,28 +29,27 @@ export const ProfileComponent = () => {
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
                 {/* Profile Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease' }}>
                     <div style={{
                         backgroundColor: '#87CEEB', // Lighter blue
                         padding: '20px',
                         borderRadius: '8px',
                         
                     }}>
+                        <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Patient Information</h2>
                        
-                        <div style={{ textAlign: 'center' }}>
+                        <div >
                             <img
                                 src={isData.profilePhoto || 'https://via.placeholder.com/150'}
                                 alt="Profile"
                                 style={{
-                                    width: '150px',
-                                    height: '150px',
-                                    borderRadius: '50%',
+                                    width: '70%',
                                     border: '2px solid #3a4d6c',
                                     objectFit: 'cover'
                                 }}
                             />
                         </div>
-                        <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                        <div style={{marginTop: '10px' }}>
                             <h3 style={{ fontSize: '1.4rem', color: '#3a4d6c' }}>{isData.fullName || 'Full Name'}</h3>
                             <p style={{ fontSize: '1rem', color: '#555' }}>Patient ID: {isData.patientId || 'N/A'}</p>
                             <p style={{ fontSize: '1rem', color: '#555' }}>Gender: {isData.gender || 'N/A'}</p>
@@ -60,7 +59,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Patient Identification Information Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.2s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.2s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -76,7 +75,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Contact Information Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.4s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.4s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -91,7 +90,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Emergency Contact Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.6s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.6s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -106,7 +105,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Medical History Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.8s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.8s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -122,7 +121,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Current Visit Details Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 1s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -142,7 +141,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Treatment and Diagnostics Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.2s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.2s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -158,7 +157,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Appointment History Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.4s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.4s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -176,7 +175,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Billing and Insurance Information Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.6s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.6s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -193,7 +192,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Discharge Summary Section */}
-                <div style={{ width: '100%', marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.8s' }}>
+                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.8s' }}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',

@@ -36,7 +36,7 @@ export const ProfileComponent = () => {
                         borderRadius: '8px',
                         
                     }}>
-                        <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Profile</h2>
+                       
                         <div style={{ textAlign: 'center' }}>
                             <img
                                 src={isData.profilePhoto || 'https://via.placeholder.com/150'}

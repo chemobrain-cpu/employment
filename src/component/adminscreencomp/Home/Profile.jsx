@@ -6,6 +6,7 @@ export const ProfileComponent = () => {
     let [isData, setIsData] = useState(null);
     let { user } = useSelector(state => state.userAuth);
     let { id } = useParams();
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         if (user) {
@@ -13,6 +14,25 @@ export const ProfileComponent = () => {
         }
     }, [id, user]);
 
+    
+    
+    useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth <= 600); // Adjust the width threshold as needed
+        };
+    
+        handleResize(); // Check screen size on initial render
+        window.addEventListener('resize', handleResize); // Add resize listener
+    
+        return () => {
+          window.removeEventListener('resize', handleResize); // Cleanup listener
+        };
+      }, []);
+    
+    
+      const style ={ width: isMobile ? '100%' : '75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease' }
+
+   
     // Function to format dates
     const formatDate = (date) => {
         if (!date) return 'N/A';
@@ -24,12 +44,16 @@ export const ProfileComponent = () => {
         return <div>Loading...</div>; // Show loading message until data is available
     }
 
+
+    
+    
+
     return (
         <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', backgroundColor: '#fff', minHeight: '100vh' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
                 {/* Profile Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB', // Lighter blue
                         padding: '20px',
@@ -59,7 +83,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Patient Identification Information Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.2s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -75,7 +99,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Contact Information Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.4s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -90,7 +114,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Emergency Contact Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.6s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -105,7 +129,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Medical History Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 0.8s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -121,7 +145,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Current Visit Details Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -141,7 +165,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Treatment and Diagnostics Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.2s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -157,7 +181,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Appointment History Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.4s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -175,7 +199,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Billing and Insurance Information Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.6s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',
@@ -192,7 +216,7 @@ export const ProfileComponent = () => {
                 </div>
 
                 {/* Discharge Summary Section */}
-                <div style={{ width:'75%',marginBottom: '20px', animation: 'fadeIn 0.6s ease 1.8s' }}>
+                <div style={style}>
                     <div style={{
                         backgroundColor: '#87CEEB',
                         padding: '20px',

@@ -19,18 +19,29 @@ export const login = (data) => {
       })
       if (response.status === 404) {
         let data = await response.json()
+        console.log(data)
         return {
           bool: false,
-          message: data.response,
+          message: data.message,
+          url: '/register'
+        }
+      }
+      if (response.status === 400) {
+        let data = await response.json()
+        console.log(data)
+        return {
+          bool: false,
+          message: data.message,
           url: '/register'
         }
       }
 
       if (response.status === 300) {
         let data = await response.json()
+        console.log(data)
         return {
           bool: false,
-          message: data.response,
+          message: data.message,
           url: '/login'
         }
       }
@@ -46,7 +57,7 @@ export const login = (data) => {
 
         return {
           bool: true,
-          message: data.response,
+          message: data,
           url: `/profile`
         }
       }

@@ -7,6 +7,7 @@ import SubmitBtn from "../../../component/common/Submit";
 // importing modals
 import LoadingModal from "../../../component/Modal/LoadingModal";
 import { login } from '../../../store/action/userAppStorage';
+import Modal from '../../../component/Modal/Modal';
 
 function LoginPage() {
     let [patientId, setpatientId] = useState("");
@@ -49,9 +50,8 @@ function LoginPage() {
             setIsLoading(false);
             setIsError(true);
             setIsErrorInfo(response.message);
-            setTimeout(() => {
-                navigate(`${response.url}`);
-            }, 3000);
+            console.log(response)
+           
         } else {
             setTimeout(() => {
                 navigate(`${response.url}`);
@@ -61,6 +61,7 @@ function LoginPage() {
 
     return (
         <>
+        {isError&&<Modal content={isErrorInfo} closeModal={()=>setIsError(false)}/>}
             <div className={styles.screenContainer}>
                 <div className={styles.rightContainer}>
                     {isLoading && <LoadingModal />}

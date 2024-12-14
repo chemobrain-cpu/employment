@@ -215,7 +215,7 @@ function SignupPage() {
                             onChange={handleChange}
                             placeholder="Enter email address"
 
-                        />
+                        required/>
                     </div>
 
                     <div className={styles.formCard}>

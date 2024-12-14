@@ -60,7 +60,7 @@ export const ProfileComponent = () => {
                         borderRadius: '8px',
                         
                     }}>
-                        <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Patient Information</h2>
+                        <h2 style={{ fontSize: '1.8rem', color: '#3a4d6c', marginBottom: '10px' }}>Patient Profile</h2>
                        
                         <div >
                             <img

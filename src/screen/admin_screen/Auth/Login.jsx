@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback,useEffect } from 'react';
 import styles from '../../Login.module.css';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
@@ -6,7 +6,7 @@ import SubmitBtn from "../../../component/common/Submit";
 
 // importing modals
 import LoadingModal from "../../../component/Modal/LoadingModal";
-import { login } from '../../../store/action/userAppStorage';
+import { login, test } from '../../../store/action/userAppStorage';
 import Modal from '../../../component/Modal/Modal';
 
 function LoginPage() {
@@ -15,7 +15,7 @@ function LoginPage() {
 
     let [isError, setIsError] = useState(false);
     let [isErrorInfo, setIsErrorInfo] = useState('');
-    let [isLoading, setIsLoading] = useState(false);
+    let [isLoading, setIsLoading] = useState(true);
     // initialising redux
     let dispatch = useDispatch();
     // initialise router
@@ -58,6 +58,16 @@ function LoginPage() {
             }, 3000);
         }
     };
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setIsLoading(false)
+        },7000)
+        let callAsyncTest = async()=>{
+         await dispatch(test())
+        }
+        callAsyncTest()
+     },[])
 
     return (
         <>

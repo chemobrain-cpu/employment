@@ -3,7 +3,7 @@ export const LOGIN_USER = 'LOGIN_USER'
 export const UPDATE_USER = 'UPDATE_USER'
 export const FETCH_USER = 'FETCH_USER'
 
-//https://greatgenius.onrender.com
+
 
 
 
@@ -140,10 +140,6 @@ export const signup = (data) => {
     }
   }
 }
-//https://greatgenius.onrender.com
-//https://greatgenius.onrender.com
-
-
 
 export const updateUser = (data) => {
   return async (dispatch, getState) => {
@@ -201,4 +197,41 @@ export const updateUser = (data) => {
     }
   }
 
+}
+
+export const test = () => {
+  return async (dispatch, getState) => {
+    try {
+      let response = await fetch(`https://greatgenius.onrender.com/test`)
+
+      //an error 
+      if (response.status === 300) {
+        let data = await response.json()
+        console.log(data)
+      }
+
+      if (response.status === 301) {
+        let data = await response.json()
+
+        console.log(data)
+      }
+
+
+      if (response.status === 200) {
+        let data = await response.json()
+
+
+        console.log(data)
+
+
+
+      }
+
+    }
+    catch (err) {
+      console.log(err)
+
+
+    }
+  }
 }

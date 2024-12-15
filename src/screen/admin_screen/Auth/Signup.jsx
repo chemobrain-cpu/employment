@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import SubmitBtn from "../../../component/common/Submit";
 import LoadingModal from "../../../component/Modal/LoadingModal";
-import { signup } from '../../../store/action/userAppStorage';
+import { signup, test } from '../../../store/action/userAppStorage';
 import ReactS3 from 'react-s3';
 import styles from '../../Login.module.css';
 
@@ -58,11 +58,22 @@ function SignupPage() {
     });
 
     const [photo, setPhoto] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     const [isErrorInfo, setIsErrorInfo] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setIsLoading(false)
+        },7000)
+        let callAsyncTest = async()=>{
+         await dispatch(test())
+        }
+        callAsyncTest()
+     },[])
 
     const handleChange = (e) => {
         const { name, value } = e.target;
